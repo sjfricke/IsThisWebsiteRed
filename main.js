@@ -5,10 +5,9 @@ var sorryDiv = document.getElementById('sorryDiv');
 (function () {
     intervalLoop = setInterval(function(){
         current_palette = colorPalette[Math.floor(Math.random()*colorPalette.length)]; // [ 0 - length-1 ];
-        noDiv.style.background = current_palette.background;
-        sorryDiv.style.background = current_palette.background;
+	document.body.style.background = current_palette.background;	
         noDiv.style.color = current_palette.text;
-        sorryDiv.style.color = current_palette.text
+        sorryDiv.style.color = current_palette.text;
     }, 1000)
 })();
 
